@@ -1,10 +1,13 @@
 #Grocery List program
-grocery_list = ["milk", "bread", "butter", "Drano"]
+grocery_list = ["milk", "bread", "butter", "tomato"]
 grocery_list.each {|x| puts "*#{x}"}
+puts
 
 #Adding rice to list
+puts "Here's the list after adding rice:"
 grocery_list << "rice"
 grocery_list.each {|x| puts "*#{x}"}
+puts
 
 
 #Method to add stuff to list
@@ -13,14 +16,28 @@ grocery_list << "#{new_item}"
 end
 
 #Counting number of stuff in list
-print "Number of stuff in list: #{grocery_list.length}"
+puts "Number of stuff in list: #{grocery_list.length}"
+puts
 
 #Banana check!
 if grocery_list.include? "banana"
 	puts "You need to pick up bananas."
+	puts
 else
 	puts "You don't need to pick up bananas today."
+	puts
 end
+
+#Displaying second item on list
+puts "The second item on the list is #{grocery_list [1]}."
+puts
+
+#Aphabetizing list
+puts "Here's an alphabetized list: "
+grocery_list.sort!
+grocery_list.each {|x| puts "*#{x}"}
+
+
 
 
 
