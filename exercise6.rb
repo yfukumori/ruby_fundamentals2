@@ -11,8 +11,8 @@ puts
 
 
 #Method to add stuff to list
-def add_stuff (new_item)
-grocery_list << "#{new_item}"
+def add_stuff (list, new_item)
+  list << "#{new_item}"
 end
 
 #Counting number of stuff in list
@@ -32,9 +32,12 @@ end
 puts "The second item on the list is #{grocery_list [1]}."
 puts
 
+add_stuff(grocery_list, "Drano")
+
 #Aphabetizing list
 puts "Here's an alphabetized list: "
-grocery_list.sort!
+grocery_list.sort! {|x, y| x.downcase <=> y.downcase }
+# grocery_list.sort!
 grocery_list.each {|x| puts "*#{x}"}
 
 
